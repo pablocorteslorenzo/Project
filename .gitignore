@@ -2,3 +2,4 @@ UnityProject/Library
 UnityProject/Temp
 *.sln
 *.csproj
+*.suo
