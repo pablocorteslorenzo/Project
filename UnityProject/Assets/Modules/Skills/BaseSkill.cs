@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,25 +13,12 @@ namespace Skill
 
         private float m_cooldownControlTime;
 
-        public abstract void Execute();
+        virtual public void Initialize(SkillData _data)
+        {
+            Data = _data;
+        }
+
+        public abstract void Process(SkillProcessData _data);
         public abstract void Cancel();
-    }
-
-    public class SkillData
-    {
-        public string ID;
-        public string Name;
-        public string Description;
-
-        public string ImagePath;
-        public bool AllowMultipleTargets;
-        public int TargetCountLimit;
-
-        public bool NeedTileTarget;
-        public bool NeedPawnTarget;
-        public bool NeedLootTarget;
-        public bool NeedGatherTarget;
-
-        public float CooldownTime;
     }
 }
