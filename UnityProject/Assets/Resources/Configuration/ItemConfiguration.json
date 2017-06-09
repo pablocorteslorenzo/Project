@@ -1,0 +1,34 @@
+{
+  "ItemDataList": [
+    {
+      "ID": "000",
+      "Name": "Potion",
+      "Stack": 10,
+	  "Image": "Images/Items/Potion"
+    },
+    {
+      "ID": "001",
+      "Name": "Sword",
+      "Stack": 1,
+	  "Image": "Images/Items/Sword"
+    },
+    {
+      "ID": "002",
+      "Name": "Boots",
+      "Stack": 1,
+	  "Image": "Images/Items/Boots"
+    },
+    {
+      "ID": "003",
+      "Name": "Axe",
+      "Stack": 1,
+	  "Image": "Images/Items/Axe"
+    },
+    {
+      "ID": "004",
+      "Name": "Herbs",
+      "Stack": 20,
+	  "Image": "Images/Items/Herb"
+    }
+  ]
+}
