@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Inventory;
 
-namespace Inventory
+namespace Game
 {
-    public class Pawn : MonoBehaviour, IInventoryOwner
+    public class Pawn : TileElement, IInventoryOwner
     {
+        public Attribute Health;
+        public Attribute Mana;
+
         private InventoryController m_inventory;
         public InventoryController Inventory { get { return m_inventory; } }
 
@@ -16,6 +20,12 @@ namespace Inventory
         {
             m_gameObject = gameObject;
             InventoryManager.Instance.CreateInventory(this);
+        }
+
+        public void Initialize()
+        {
+            Health = new Attribute(220, 220, this, AttributeType.Health);
+            Mana = new Attribute(100, 100, this, AttributeType.Mana);
         }
 
         public void SetInventory(InventoryController _inventory)

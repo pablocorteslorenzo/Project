@@ -49,6 +49,11 @@ namespace Inventory
             return null;
         }
 
+        public void MoveItems()
+        {
+
+        }
+
         private void OnDestroy()
         {
             m_instance = null;
